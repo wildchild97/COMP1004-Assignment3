@@ -16,5 +16,20 @@ namespace Assignment3_MovieBonanza
         {
             InitializeComponent();
         }
+
+        private void _cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void _stream_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintPreviewDialog.Show();
+        }
     }
 }

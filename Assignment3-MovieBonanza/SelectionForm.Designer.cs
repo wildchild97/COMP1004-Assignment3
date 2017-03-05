@@ -113,8 +113,8 @@
             this.CostLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.CategoryLabel = new System.Windows.Forms.Label();
-            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
             this.NextButton = new System.Windows.Forms.Button();
+            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
             this.SelectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -149,7 +149,7 @@
             this.MovieListView.Margin = new System.Windows.Forms.Padding(9);
             this.MovieListView.MultiSelect = false;
             this.MovieListView.Name = "MovieListView";
-            this.MovieListView.Size = new System.Drawing.Size(253, 150);
+            this.MovieListView.Size = new System.Drawing.Size(269, 165);
             this.MovieListView.TabIndex = 1;
             this.MovieListView.TileSize = new System.Drawing.Size(200, 30);
             this.MovieListView.UseCompatibleStateImageBehavior = false;
@@ -181,11 +181,11 @@
             listViewItem22,
             listViewItem23,
             listViewItem24});
-            this.PriceListView.Location = new System.Drawing.Point(18, 180);
+            this.PriceListView.Location = new System.Drawing.Point(299, 18);
             this.PriceListView.MultiSelect = false;
             this.PriceListView.Name = "PriceListView";
             this.PriceListView.Scrollable = false;
-            this.PriceListView.Size = new System.Drawing.Size(130, 150);
+            this.PriceListView.Size = new System.Drawing.Size(130, 165);
             this.PriceListView.TabIndex = 2;
             this.PriceListView.UseCompatibleStateImageBehavior = false;
             this.PriceListView.View = System.Windows.Forms.View.Details;
@@ -207,7 +207,7 @@
             this.SelectionGroupBox.Controls.Add(this.CostLabel);
             this.SelectionGroupBox.Controls.Add(this.TitleLabel);
             this.SelectionGroupBox.Controls.Add(this.CategoryLabel);
-            this.SelectionGroupBox.Location = new System.Drawing.Point(18, 345);
+            this.SelectionGroupBox.Location = new System.Drawing.Point(185, 195);
             this.SelectionGroupBox.Name = "SelectionGroupBox";
             this.SelectionGroupBox.Size = new System.Drawing.Size(244, 150);
             this.SelectionGroupBox.TabIndex = 3;
@@ -268,34 +268,38 @@
             this.CategoryLabel.TabIndex = 0;
             this.CategoryLabel.Text = "Category:";
             // 
-            // MoviePictureBox
-            // 
-            this.MoviePictureBox.Location = new System.Drawing.Point(283, 18);
-            this.MoviePictureBox.Name = "MoviePictureBox";
-            this.MoviePictureBox.Size = new System.Drawing.Size(300, 320);
-            this.MoviePictureBox.TabIndex = 4;
-            this.MoviePictureBox.TabStop = false;
-            // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(508, 472);
+            this.NextButton.Location = new System.Drawing.Point(354, 364);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(75, 23);
             this.NextButton.TabIndex = 5;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
             // 
+            // MoviePictureBox
+            // 
+            this.MoviePictureBox.Location = new System.Drawing.Point(18, 195);
+            this.MoviePictureBox.Name = "MoviePictureBox";
+            this.MoviePictureBox.Size = new System.Drawing.Size(146, 183);
+            this.MoviePictureBox.TabIndex = 4;
+            this.MoviePictureBox.TabStop = false;
+            // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 498);
+            this.ClientSize = new System.Drawing.Size(438, 390);
+            this.ControlBox = false;
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.MoviePictureBox);
             this.Controls.Add(this.SelectionGroupBox);
             this.Controls.Add(this.PriceListView);
             this.Controls.Add(this.MovieListView);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SelectionForm";
+            this.ShowIcon = false;
             this.Text = "Selection Form";
             this.SelectionGroupBox.ResumeLayout(false);
             this.SelectionGroupBox.PerformLayout();
