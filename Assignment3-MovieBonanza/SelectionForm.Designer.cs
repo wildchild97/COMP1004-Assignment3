@@ -41,7 +41,7 @@
             "Divergent",
             "Action"}, -1);
             System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Don\'t Scream",
+            "Don\'t Breath",
             "Thriller"}, -1);
             System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Fast and Furious 7",
@@ -107,6 +107,16 @@
             this.Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SelectionGroupBox = new System.Windows.Forms.GroupBox();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
+            this.CostTextBox = new System.Windows.Forms.TextBox();
+            this.CategoryTextBox = new System.Windows.Forms.TextBox();
+            this.CostLabel = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.CategoryLabel = new System.Windows.Forms.Label();
+            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.SelectionGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MovieListView
@@ -139,7 +149,7 @@
             this.MovieListView.Margin = new System.Windows.Forms.Padding(9);
             this.MovieListView.MultiSelect = false;
             this.MovieListView.Name = "MovieListView";
-            this.MovieListView.Size = new System.Drawing.Size(269, 232);
+            this.MovieListView.Size = new System.Drawing.Size(253, 150);
             this.MovieListView.TabIndex = 1;
             this.MovieListView.TileSize = new System.Drawing.Size(200, 30);
             this.MovieListView.UseCompatibleStateImageBehavior = false;
@@ -171,11 +181,11 @@
             listViewItem22,
             listViewItem23,
             listViewItem24});
-            this.PriceListView.Location = new System.Drawing.Point(18, 262);
+            this.PriceListView.Location = new System.Drawing.Point(18, 180);
             this.PriceListView.MultiSelect = false;
             this.PriceListView.Name = "PriceListView";
             this.PriceListView.Scrollable = false;
-            this.PriceListView.Size = new System.Drawing.Size(148, 151);
+            this.PriceListView.Size = new System.Drawing.Size(130, 150);
             this.PriceListView.TabIndex = 2;
             this.PriceListView.UseCompatibleStateImageBehavior = false;
             this.PriceListView.View = System.Windows.Forms.View.Details;
@@ -191,23 +201,105 @@
             // 
             // SelectionGroupBox
             // 
-            this.SelectionGroupBox.Location = new System.Drawing.Point(420, 153);
+            this.SelectionGroupBox.Controls.Add(this.TitleTextBox);
+            this.SelectionGroupBox.Controls.Add(this.CostTextBox);
+            this.SelectionGroupBox.Controls.Add(this.CategoryTextBox);
+            this.SelectionGroupBox.Controls.Add(this.CostLabel);
+            this.SelectionGroupBox.Controls.Add(this.TitleLabel);
+            this.SelectionGroupBox.Controls.Add(this.CategoryLabel);
+            this.SelectionGroupBox.Location = new System.Drawing.Point(18, 345);
             this.SelectionGroupBox.Name = "SelectionGroupBox";
-            this.SelectionGroupBox.Size = new System.Drawing.Size(200, 100);
+            this.SelectionGroupBox.Size = new System.Drawing.Size(244, 150);
             this.SelectionGroupBox.TabIndex = 3;
             this.SelectionGroupBox.TabStop = false;
             this.SelectionGroupBox.Text = "Your Selection";
+            // 
+            // TitleTextBox
+            // 
+            this.TitleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleTextBox.Location = new System.Drawing.Point(76, 26);
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.Size = new System.Drawing.Size(142, 22);
+            this.TitleTextBox.TabIndex = 5;
+            // 
+            // CostTextBox
+            // 
+            this.CostTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostTextBox.Location = new System.Drawing.Point(76, 68);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.Size = new System.Drawing.Size(142, 22);
+            this.CostTextBox.TabIndex = 4;
+            // 
+            // CategoryTextBox
+            // 
+            this.CategoryTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryTextBox.Location = new System.Drawing.Point(76, 109);
+            this.CategoryTextBox.Name = "CategoryTextBox";
+            this.CategoryTextBox.Size = new System.Drawing.Size(142, 22);
+            this.CategoryTextBox.TabIndex = 3;
+            // 
+            // CostLabel
+            // 
+            this.CostLabel.AutoSize = true;
+            this.CostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostLabel.Location = new System.Drawing.Point(7, 71);
+            this.CostLabel.Name = "CostLabel";
+            this.CostLabel.Size = new System.Drawing.Size(38, 16);
+            this.CostLabel.TabIndex = 2;
+            this.CostLabel.Text = "Cost:";
+            // 
+            // TitleLabel
+            // 
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(7, 29);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(37, 16);
+            this.TitleLabel.TabIndex = 1;
+            this.TitleLabel.Text = "Title:";
+            // 
+            // CategoryLabel
+            // 
+            this.CategoryLabel.AutoSize = true;
+            this.CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryLabel.Location = new System.Drawing.Point(7, 112);
+            this.CategoryLabel.Name = "CategoryLabel";
+            this.CategoryLabel.Size = new System.Drawing.Size(66, 16);
+            this.CategoryLabel.TabIndex = 0;
+            this.CategoryLabel.Text = "Category:";
+            // 
+            // MoviePictureBox
+            // 
+            this.MoviePictureBox.Location = new System.Drawing.Point(283, 18);
+            this.MoviePictureBox.Name = "MoviePictureBox";
+            this.MoviePictureBox.Size = new System.Drawing.Size(300, 320);
+            this.MoviePictureBox.TabIndex = 4;
+            this.MoviePictureBox.TabStop = false;
+            // 
+            // NextButton
+            // 
+            this.NextButton.Location = new System.Drawing.Point(508, 472);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(75, 23);
+            this.NextButton.TabIndex = 5;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
             // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 429);
+            this.ClientSize = new System.Drawing.Size(585, 498);
+            this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.MoviePictureBox);
             this.Controls.Add(this.SelectionGroupBox);
             this.Controls.Add(this.PriceListView);
             this.Controls.Add(this.MovieListView);
             this.Name = "SelectionForm";
             this.Text = "Selection Form";
+            this.SelectionGroupBox.ResumeLayout(false);
+            this.SelectionGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,6 +313,14 @@
         private System.Windows.Forms.ColumnHeader Category;
         private System.Windows.Forms.ColumnHeader Price;
         private System.Windows.Forms.GroupBox SelectionGroupBox;
+        private System.Windows.Forms.Label CostLabel;
+        private System.Windows.Forms.Label TitleLabel;
+        private System.Windows.Forms.Label CategoryLabel;
+        private System.Windows.Forms.TextBox TitleTextBox;
+        private System.Windows.Forms.TextBox CostTextBox;
+        private System.Windows.Forms.TextBox CategoryTextBox;
+        private System.Windows.Forms.PictureBox MoviePictureBox;
+        private System.Windows.Forms.Button NextButton;
     }
 }
 

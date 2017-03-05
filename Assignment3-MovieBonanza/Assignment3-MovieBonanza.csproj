@@ -110,6 +110,57 @@
   <ItemGroup>
     <None Include="Resources\Logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50-FirstDates.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beauty-and-the-Beast.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dinosaur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Divergent.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DontBreath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Furious_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HolidayInn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IronMan.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laLaLand_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\legoMovie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mulan.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Proposal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound_of_music.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stargate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheMummy.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
