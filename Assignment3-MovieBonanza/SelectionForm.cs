@@ -122,7 +122,7 @@ namespace Assignment3_MovieBonanza
                 _picture = "Ring.jpg";
             }
 
-            MoviePictureBox.Load(_picture);
+            MoviePictureBox.Load(this._picture);
             TitleTextBox.Text = this._movieTitle;
             CategoryTextBox.Text = this._genre;
             _calculateCost();

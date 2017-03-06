@@ -21,7 +21,7 @@ namespace Assignment3_MovieBonanza
 
         //PRIVATE INSTANCE VARIABLES 
         private double _subTotal;
-        private double _total;
+        public double total;
         private double _tax;
         private double _DVD = 0;
         private double _cost;
@@ -35,14 +35,9 @@ namespace Assignment3_MovieBonanza
             TitleTextBox.Text = movie[0].ToString();
             CategoryTextBox.Text = movie[1].ToString();
             CostTextBox.Text = "$" + movie[2].ToString();
-
-            _cost = Convert.ToDouble(movie[2].ToString());
+            MoviePictureBox.Load(picture);
 
             calculatePrice();
-            DVDTextBox.Text = _DVD.ToString();
-            SubTotalTextBox.Text = _subTotal.ToString();
-            TaxTextBox.Text = _tax.ToString();
-            TotalTextBox.Text = _total.ToString();
         }
 
         // PUBLIC METHODS
@@ -54,17 +49,36 @@ namespace Assignment3_MovieBonanza
         /// </summary>
         public void calculatePrice ()
         {
+            _cost = Convert.ToDouble(movie[2].ToString());
+
             _subTotal = _DVD + _cost;
             _tax = _subTotal * 0.13;
-            _total = _subTotal + _tax;
+            total = _subTotal + _tax;
+
+            DVDTextBox.Text = _DVD.ToString();
+            SubTotalTextBox.Text = _subTotal.ToString();
+            TaxTextBox.Text = _tax.ToString();
+            TotalTextBox.Text = total.ToString();
+           
         }
 
         //PRIVATE METHODS++++++++++++++++++++
+        /// <summary>
+        /// this method closes this form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+            previousForm.Show();
         }
 
+        /// <summary>
+        /// this method opens the stream form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _stream_Click(object sender, EventArgs e)
         {
             // Instantiate the next form
@@ -77,11 +91,21 @@ namespace Assignment3_MovieBonanza
             this.Hide();
         }
 
+        /// <summary>
+        /// this shows a print preview
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PrintPreviewDialog.Show();
         }
 
+        /// <summary>
+        /// this shows an about box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutBox aboutBox = new AboutBox();
@@ -89,11 +113,30 @@ namespace Assignment3_MovieBonanza
             aboutBox.Show();
         }
 
+        /// <summary>
+        /// this reveal the hidden label and textbox for buying a dvd sets the price
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DVDCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             DVDTextBox.Visible = true;
             DVDOrderLabel.Visible = true;
             _DVD = 10;
+
+            calculatePrice();
+        }
+
+        /// <summary>
+        /// this hides this form and goes back to selection form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            previousForm.Show();
+           
         }
     }
 }

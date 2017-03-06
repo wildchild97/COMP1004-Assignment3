@@ -26,17 +26,24 @@ namespace Assignment3_MovieBonanza
         public StreamForm()
         {
             InitializeComponent();
-            //ChargedLabel.Text = "Your credit Card has been charged " + _grandTotal;
-            //StreamLabel.Text = _movieTitle +" will begin streaming shortly";
+            ChargedLabel.Text = "Your credit Card has been charged $" + total;
+            StreamLabel.Text =  movie[0].ToString() +" will begin streaming shortly";
         }
+
+        //PUBLIC PROPERTIES++++++++++++++++++
+        public static List<TextBox> movie { get; }
+        public static double total { get; }
 
         //PRIVATE METHODS++++++++++++++++++++
 
-        //PUBLIC PROPERTIES++++++++++++++++++
-
+        /// <summary>
+        /// will terminate the program
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _oKButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }
