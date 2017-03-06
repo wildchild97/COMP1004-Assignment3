@@ -18,6 +18,7 @@ namespace Assignment3_MovieBonanza
     public partial class StreamForm : Form
     {
         //PRIVATE INSTANCE VARIABLES 
+        public OrderForm previousForm;
 
 
         //CONSTRUCTOR++++++++++++++++++++++
@@ -25,8 +26,8 @@ namespace Assignment3_MovieBonanza
         public StreamForm()
         {
             InitializeComponent();
-            ChargedLabel.Text = "Your credit Card has been charged " + _grandTotal;
-            StreamLabel.Text = _movieTitle +" will begin streaming shortly";
+            //ChargedLabel.Text = "Your credit Card has been charged " + _grandTotal;
+            //StreamLabel.Text = _movieTitle +" will begin streaming shortly";
         }
 
         //PRIVATE METHODS++++++++++++++++++++

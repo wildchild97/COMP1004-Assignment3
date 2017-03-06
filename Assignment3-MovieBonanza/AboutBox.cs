@@ -102,14 +102,10 @@ namespace Assignment3_MovieBonanza
         }
         #endregion
 
-        private void tableLayoutPanel_Paint(object sender, PaintEventArgs e)
+
+        private void okButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void labelVersion_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }
